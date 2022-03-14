@@ -1,0 +1,46 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="container-sm">
+    <form action="/products/{{ product.id }}?_method=PUT" method="POST">
+        <fieldset>
+            <legend>Edit New Product</legend>
+            <label class="form-label">Name:</label>
+            <input 
+                type="text" 
+                name="name" 
+                placeholder="enter product name"
+                class="form-control"
+            >
+            <label class="form-label">Description:</label>
+            <input 
+                type="text" 
+                name="description" 
+                placeholder="enter product description"
+                class="form-control"
+            >
+            <label class="form-label">Image:</label>
+            <input 
+                type="text" 
+                name="img" 
+                placeholder="enter image url"
+                class="form-control"
+            >
+            <label class="form-label">Price:</label>
+            <input 
+                type="text" 
+                name="price" 
+                placeholder="enter price"
+                class="form-control"
+            >
+            <label class="form-label">Quantity:</label>
+            <input 
+                type="text" 
+                name="qty" 
+                placeholder="enter price"
+                class="form-control"
+            >
+        </fieldset>
+        <input type="submit" class="btn btn-success" value="Create New Product">
+    </form>
+</div>
+{% endblock %}

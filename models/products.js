@@ -1,0 +1,33 @@
+
+/////////////////////////////////////////////////
+////////////// DEPENDENCIES /////////////////////
+/////////////////////////////////////////////////
+
+const mongoose = require('./connection')
+
+// we'll import our user model so we can populate the info
+const User = require('./user')
+
+/////////////////////////////////////////////////
+////////////// PRODUCT MODEL ////////////////////
+/////////////////////////////////////////////////
+
+const { Schema, model } = mongoose
+
+// make our product schema
+const productSchema = new Schema({
+    name: String,
+    description: String,
+    img: String,
+    price: { type: Number, min: 0 },
+    qty: { type: Number, min: 0 },
+}, { timestamps: true })
+
+// make our product model
+const Product = model("Product", productSchema)
+
+/////////////////////////////////////////////////
+////////////// EXPORT MODEL /////////////////////
+/////////////////////////////////////////////////
+
+module.exports = Product

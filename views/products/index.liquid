@@ -1,0 +1,26 @@
+
+{% layout 'layout.liquid'%}
+{% block content %}
+    <div >
+        <h2 class="display-6">All Products</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="card" style="width: 18rem;">
+                    <h5 class="card-header">{{product.name}}</h5>
+                    <div class="card-body">
+                        <p><img src="{{product.img}}"></p> 
+                       <p><h5 class="card-title">{{product.description}}</h5></p> 
+                       <p><h5 class="card-title">{{product.price}}</h5></p> 
+                       <p><h5 class="card-title">{{product.qty}}</h5></p> 
+                       <form action="/products/{{ product.id }}?_method=PUT" method="POST">
+                            <input type="submit" class="btn btn-success" value="buy">
+                        </form>
+                        <a href="/products/{{ product.id }}" class="btn btn-info">
+                            View {{ product.name }}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
