@@ -108,6 +108,21 @@ router.get('/:id', (req, res) => {
 		})
 })
 
+// buy route 
+
+router.put('/:id/buy/', (req, res) => {
+	const productId = req.params.id 
+	Product.findByIdAndUpdate(productId, { $inc: {qty: -1 } } )
+		.then((product) => {
+			console.log('the new quantity of the product is', product)
+			res.redirect(`/products/${product.id}`)
+		})
+		.catch(error => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
 // delete route
 router.delete('/:id', (req, res) => {
 	const productId = req.params.id
