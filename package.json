@@ -1,16 +1,12 @@
 {
-  "name": "mongoose-store-deliverable",
+  "name": "mongoose-express-liquid-boilerplate",
   "version": "1.0.0",
-  "description": "![General Assembly Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "seed": "node models/seed.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://git.generalassemb.ly/smilitello/mongoose-store-deliverable.git"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +19,7 @@
     "express-session": "^1.17.2",
     "liquid-express-views": "^1.0.8",
     "method-override": "^3.0.0",
-    "mongoose": "^6.2.5",
+    "mongoose": "^6.2.4",
     "morgan": "^1.10.0"
   }
 }

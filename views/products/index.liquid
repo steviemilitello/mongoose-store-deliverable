@@ -1,4 +1,3 @@
-
 {% layout 'layout.liquid'%}
 {% block content %}
     <div >
@@ -12,9 +11,9 @@
                        <p><h5 class="card-title">{{product.description}}</h5></p> 
                        <p><h5 class="card-title">{{product.price}}</h5></p> 
                        <p><h5 class="card-title">{{product.qty}}</h5></p> 
-                       <form action="/products/{{ product.id }}?_method=PUT" method="POST">
+                       <!-- <form action="/products/{{ product.id }}?_method=PUT" method="POST">
                             <input type="submit" class="btn btn-success" value="buy">
-                        </form>
+                        </form> -->
                         <a href="/products/{{ product.id }}" class="btn btn-info">
                             View {{ product.name }}
                         </a>

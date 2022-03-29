@@ -19,8 +19,8 @@ const productSchema = new Schema({
     name: String,
     description: String,
     img: String,
-    price: { type: Number, min: 0 },
-    qty: { type: Number, min: 0 },
+    price: Number,
+    qty: Number,
 }, { timestamps: true })
 
 // make our product model
